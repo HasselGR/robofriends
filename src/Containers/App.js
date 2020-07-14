@@ -11,9 +11,11 @@ class App extends React.Component {
         super()
         this.state = {
             robots: [],
-            searchfield:''
+            searchfield:'',
+            seen: false
         }
     }
+
     componentDidMount (){
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(response=> response.json())
